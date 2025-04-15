@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Buku</title>
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f7f8fc;
@@ -18,7 +17,6 @@
             color: #333;
         }
 
-        /* Container for the whole content */
         .container {
             background-color: #fff;
             border-radius: 10px;
@@ -37,7 +35,6 @@
             letter-spacing: 1px;
         }
 
-        /* Table Styles */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -63,18 +60,15 @@
             border-bottom: 1px solid #ddd;
         }
 
-        /* Zebra Stripes (alternate row colors) */
         tr:nth-child(even) td {
             background-color: #fafafa;
         }
 
-        /* Hover Effect */
         tr:hover {
             background-color: #f1f1f1;
             cursor: pointer;
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             table {
                 font-size: 0.9rem;
@@ -96,6 +90,7 @@
         <h1>Daftar Buku</h1>
         <table>
             <tr>
+                <th>ID</th>
                 <th>Judul</th>
                 <th>Penulis</th>
                 <th>Penerbit</th>
@@ -103,6 +98,7 @@
             </tr>
             @foreach ($books as $book)
                 <tr>
+                    <td>{{ $book->id }}</td>
                     <td>{{ $book->judul }}</td>
                     <td>{{ $book->penulis }}</td>
                     <td>{{ $book->penerbit }}</td>
